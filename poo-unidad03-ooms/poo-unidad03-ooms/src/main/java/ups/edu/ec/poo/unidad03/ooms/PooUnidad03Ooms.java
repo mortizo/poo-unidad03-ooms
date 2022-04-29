@@ -5,6 +5,8 @@
 
 package ups.edu.ec.poo.unidad03.ooms;
 
+import java.awt.Dimension;
+
 /**
  *
  * @author morti
@@ -13,5 +15,8 @@ public class PooUnidad03Ooms {
 
     public static void main(String[] args) {
         System.out.println("Hola Mundo");
+        Ventana v = new Ventana("Hola Mundo");
+        v.setVisible(true);
+        
     }
 }
