@@ -14,9 +14,16 @@ import java.awt.Dimension;
 public class PooUnidad03Ooms {
 
     public static void main(String[] args) {
-        System.out.println("Hola Mundo");
-        Ventana v = new Ventana("Hola Mundo");
-        v.setVisible(true);
         
+        var v1 = new Ventana0301a("Unidad 03.01a");
+        var v2 = new Ventana0301b("Unidad 03.01b");
+        var v3 = new Ventana0301c("Unidad 03.01c");
+        var v4 = new Ventana0301d("Unidad 03.01d");
+        
+        v1.setVisible(true);
+        v2.setVisible(true);
+        v3.setVisible(true);
+        v4.setVisible(true);
+
     }
 }
