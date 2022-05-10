@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package ups.edu.ec.poo.unidad03.ooms;
+package semana01;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -20,7 +20,7 @@ import javax.swing.JPanel;
 public class Ventana0301b extends JFrame {
 
     private final JPanel panelPrincipal = new JPanel();
-    private List<JLabel> jLabelList = new ArrayList<>();
+    private final List<JLabel> jLabelList = new ArrayList<>();
     
     public Ventana0301b(String title) {
         this.setTitle(title);
@@ -43,8 +43,7 @@ public class Ventana0301b extends JFrame {
         
         this.jLabelList.add(1,new JLabel());
         var imagen = new ImageIcon("C:\\Netbeans\\poo-unidad03-ooms"
-                + "\\poo-unidad03-ooms\\src\\main\\java\\ups\\edu\\ec\\poo\\"
-                + "unidad03\\ooms\\imagen1.png");
+                + "\\poo-unidad03-ooms\\src\\main\\java\\semana01\\imagen1.png");
         this.jLabelList.get(1).setIcon(imagen);
         this.jLabelList.get(1).setBackground(Color.BLUE);
         this.jLabelList.get(1).setOpaque(true);
@@ -57,8 +56,6 @@ public class Ventana0301b extends JFrame {
         this.panelPrincipal.add(this.jLabelList.get(0));        
         this.panelPrincipal.add(this.jLabelList.get(1));
         this.panelPrincipal.add(this.jLabelList.get(2));
-        
-        System.out.println(this.panelPrincipal.getLayout().toString());
     }
 }
 
