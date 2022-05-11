@@ -19,11 +19,14 @@ public class PooUnidad03Ooms {
         var v2 = new Ventana0301b("Unidad 03.01b");
         var v3 = new Ventana0301c("Unidad 03.01c");
         var v4 = new Ventana0301d("Unidad 03.01d");
+        var v5 = new Ventana0302a("Unidad 03.02a");
         
         v1.setVisible(true);
         v2.setVisible(true);
         v3.setVisible(true);
         v4.setVisible(true);
+        v5.setVisible(true);
+        
 
     }
 }
