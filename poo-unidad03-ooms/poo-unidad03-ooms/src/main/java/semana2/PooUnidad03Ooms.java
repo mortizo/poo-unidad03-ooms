@@ -16,9 +16,13 @@ public class PooUnidad03Ooms {
 
     public static void main(String[] args) {
         
-        var v1 = new Ventana0302a("Unidad 03.02a");
+        //var v1 = new Ventana0302a("Unidad 03.02a");
+        //v1.setVisible(true);
         
-        v1.setVisible(true);
+        var v2 = new Ventana0302b("Unidad 03.02b");
+        v2.setVisible(true);
+        
+        
 
         
 
