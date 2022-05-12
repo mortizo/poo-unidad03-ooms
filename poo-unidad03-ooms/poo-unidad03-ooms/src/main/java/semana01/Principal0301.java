@@ -8,15 +8,19 @@ package semana01;
  *
  * @author morti
  */
-public class Principal030101 {
+public class Principal0301 {
     
     public static void main(String [] args){
     
         //var v = new Ventana030101("Ventana 2022-05-10",800,600);
         //v.setVisible(true);
         
-        var v = new Ventana030102("Ventana 2022-05-11");
-        v.setVisible(true);
+        var v1 = new Ventana030103("Ventana 2022-05-12");
+        v1.setVisible(true);
+        
+        var v2 = new Ventana030104("Ventana 2022-05-12");
+        v2.setVisible(true);
+        
         
         
     }
