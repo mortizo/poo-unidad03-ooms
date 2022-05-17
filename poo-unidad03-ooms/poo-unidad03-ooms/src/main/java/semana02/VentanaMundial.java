@@ -88,15 +88,15 @@ public class VentanaMundial extends JFrame{
         this.jPanelList.get(0).add(this.jTextFieldList.get(0));
         this.jPanelList.get(1).add(this.jTextFieldList.get(1));
         this.jPanelList.get(2).add(this.jTextFieldList.get(2));
-        
-    
     }
     
     public void iniciarBotones(){
-    
-        this.jPanelList.get(3).add(new JButton("Registrar"));
-        this.jPanelList.get(3).add(new JButton("Listar"));
-               
+        this.jButtonList = new ArrayList<>();
+        this.jButtonList.add(new JButton("Registrar"));
+        this.jButtonList.add(new JButton("Listar"));
+        
+        this.jPanelList.get(3).add(this.jButtonList.get(0));
+        this.jPanelList.get(3).add(this.jButtonList.get(0));    
     }
     
     
