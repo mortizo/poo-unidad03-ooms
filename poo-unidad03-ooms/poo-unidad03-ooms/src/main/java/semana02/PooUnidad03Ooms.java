@@ -19,12 +19,11 @@ public class PooUnidad03Ooms {
         //var v1 = new Ventana0302a("Unidad 03.02a");
         //v1.setVisible(true);
         
-        var v2 = new Ventana0302b("Unidad 03.02b");
-        v2.setVisible(true);
+        //var v2 = new Ventana0302b("Unidad 03.02b");
+        //v2.setVisible(true);
         
-        
-
-        
+        var v3 = new VentanaMundial("Mundiales de Fútbol");
+        v3.setVisible(true);
 
     }
 }
