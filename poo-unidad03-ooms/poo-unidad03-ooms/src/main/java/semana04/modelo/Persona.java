@@ -5,6 +5,7 @@
 package semana04.modelo;
 
 import java.time.LocalDate;
+import java.time.Period;
 
 /**
  *
@@ -62,6 +63,10 @@ public class Persona {
         this.fechaNacimiento = fechaNacimiento;
     }
 
+    public double getEdad(){
+        return Period.between(fechaNacimiento, LocalDate.now()).getYears();
+    }
+    
     @Override
     public String toString() {
         return "Persona{" + "codigo=" + codigo + ", nombre=" + nombre + 

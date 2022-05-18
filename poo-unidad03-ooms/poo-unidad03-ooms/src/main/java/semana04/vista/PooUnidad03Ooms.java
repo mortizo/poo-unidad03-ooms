@@ -3,8 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Project/Maven2/JavaApp/src/main/java/${packagePath}/${mainClassName}.java to edit this template
  */
 
-package semana02;
+package semana04.vista;
 
+import semana03.vista.*;
+import semana03.vista.PersonaVentana0303a;
+import semana02.*;
 import semana01.*;
 import java.awt.Dimension;
 
@@ -16,14 +19,8 @@ public class PooUnidad03Ooms {
 
     public static void main(String[] args) {
         
-     /*   var v1 = new Ventana0302a("Unidad 03.02a");
+        var v1 = new PersonaVentana0304a("Unidad 03.04a");
         v1.setVisible(true);
-        
-        var v2 = new Ventana0302b("Unidad 03.02b");
-        v2.setVisible(true);
-     */   
-        var v3 = new VentanaMundial("Mundiales de Fútbol");
-        v3.setVisible(true);
 
     }
 }
