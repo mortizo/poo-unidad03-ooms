@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -28,6 +29,7 @@ public class VentanaMundial extends JFrame{
     private List<JPanel> jPanelList;
     private List<JButton> jButtonList;
     private List<JCheckBox> jCheckboxList;
+    private JComboBox jComboBox1;
     
     
     public VentanaMundial(String title) throws HeadlessException {
@@ -47,6 +49,7 @@ public class VentanaMundial extends JFrame{
         this.iniciarEtiquetas();
         this.iniciarTextos();
         this.iniciarBotones();
+        this.iniciarChecks();
     }
     
     public void iniciarPaneles(){
@@ -76,11 +79,14 @@ public class VentanaMundial extends JFrame{
         this.jLabelList.add(new JLabel("Ingrese Nombre: "));
         this.jLabelList.add(new JLabel("Ingrese Edición: "));
         this.jLabelList.add(new JLabel("Ingrese Auspiciantes: "));
+        this.jLabelList.add(new JLabel("Seleccione la mascota: "));
+        
         this.jPanelList.get(0).add(this.jLabelList.get(0));
         this.jPanelList.get(1).add(this.jLabelList.get(1));
         this.jPanelList.get(2).add(this.jLabelList.get(2));
-        this.jPanelList.get(2).add(this.jLabelList.get(3));
-
+        this.jPanelList.get(3).add(this.jLabelList.get(3));
+        this.jPanelList.get(4).add(this.jLabelList.get(4));
+        
     }
     
     public void iniciarTextos(){
@@ -113,11 +119,24 @@ public class VentanaMundial extends JFrame{
         this.jCheckboxList.add(new JCheckBox("Pepsi"));
         this.jCheckboxList.add(new JCheckBox("FIFA",true));
         
-               
-        
-        
+        this.jPanelList.get(3).add(this.jCheckboxList.get(0));
+        this.jPanelList.get(3).add(this.jCheckboxList.get(1));
+        this.jPanelList.get(3).add(this.jCheckboxList.get(2));
+        this.jPanelList.get(3).add(this.jCheckboxList.get(3));
+        this.jPanelList.get(3).add(this.jCheckboxList.get(4));
     }
     
-    
+    public void iniciarCombo(){
+        this.jComboBox1 = new JComboBox();
+        this.jComboBox1.addItem("Sin Mascota");
+        this.jComboBox1.addItem("Willie");
+        this.jComboBox1.addItem("Juanito");
+        this.jComboBox1.addItem("Tip y Tap");
+        this.jComboBox1.addItem("Gauchito mundialito");
+        this.jComboBox1.addItem("Naranjito");
+        this.jComboBox1.addItem("Pique");
+        this.jComboBox1.addItem("Ciao");
+        this.jComboBox1.addItem("No sabe / no conoce");
+    }
     
 }
