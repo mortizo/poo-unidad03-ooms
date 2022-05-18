@@ -43,13 +43,13 @@ public class VentanaMundial extends JFrame{
     
     public void iniciarComponentes(){
         this.jPanel1 = new JPanel();
-        this.jPanel1.setBackground(Color.RED);
         this.jPanel1.setLayout(new GridLayout(6,1));
         this.iniciarPaneles();
         this.iniciarEtiquetas();
         this.iniciarTextos();
         this.iniciarBotones();
         this.iniciarChecks();
+        this.iniciarCombo();
     }
     
     public void iniciarPaneles(){
@@ -60,17 +60,12 @@ public class VentanaMundial extends JFrame{
         this.jPanelList.add(new JPanel());
         this.jPanelList.add(new JPanel());
         this.jPanelList.add(new JPanel());
-    /*    this.jPanelList.get(0).setBackground(Color.WHITE);
-        this.jPanelList.get(1).setBackground(Color.BLUE);
-        this.jPanelList.get(2).setBackground(Color.CYAN);
-        this.jPanelList.get(3).setBackground(Color.YELLOW);*/
         this.jPanel1.add(this.jPanelList.get(0));
         this.jPanel1.add(this.jPanelList.get(1));
         this.jPanel1.add(this.jPanelList.get(2));
         this.jPanel1.add(this.jPanelList.get(3));
         this.jPanel1.add(this.jPanelList.get(4));
-        this.jPanel1.add(this.jPanelList.get(5));
-        
+        this.jPanel1.add(this.jPanelList.get(5)); 
     }
     
     public void iniciarEtiquetas(){
@@ -85,8 +80,7 @@ public class VentanaMundial extends JFrame{
         this.jPanelList.get(1).add(this.jLabelList.get(1));
         this.jPanelList.get(2).add(this.jLabelList.get(2));
         this.jPanelList.get(3).add(this.jLabelList.get(3));
-        this.jPanelList.get(4).add(this.jLabelList.get(4));
-        
+        this.jPanelList.get(4).add(this.jLabelList.get(4)); 
     }
     
     public void iniciarTextos(){
@@ -108,7 +102,7 @@ public class VentanaMundial extends JFrame{
         this.jButtonList.add(new JButton("Listar"));
         
         this.jPanelList.get(5).add(this.jButtonList.get(0));
-        this.jPanelList.get(5).add(this.jButtonList.get(0));    
+        this.jPanelList.get(5).add(this.jButtonList.get(1));    
     }
     
     public void iniciarChecks(){
@@ -137,6 +131,8 @@ public class VentanaMundial extends JFrame{
         this.jComboBox1.addItem("Pique");
         this.jComboBox1.addItem("Ciao");
         this.jComboBox1.addItem("No sabe / no conoce");
+        
+        this.jPanelList.get(4).add(this.jComboBox1);
     }
     
 }
