@@ -34,7 +34,7 @@ import semana04.controlador.PersonaControl;
  *
  * @author morti
  */
-public class PersonaVentana0304a extends JFrame implements ActionListener, KeyListener{
+public class PersonaVentana0304a extends JFrame implements ActionListener{
 
     private List<JPanel> jPanelList;
     private List<JLabel> jLabelList;
@@ -71,24 +71,27 @@ public class PersonaVentana0304a extends JFrame implements ActionListener, KeyLi
               
       
        this.jPanelList.get(0).setBorder(BorderFactory.createTitledBorder("Panel Principal"));
-       this.jPanelList.get(0).setLayout(new GridLayout(6,1));
-       this.jPanelList.get(0).add(this.jPanelList.get(1));
-       this.jPanelList.get(0).add(this.jPanelList.get(2));
-       this.jPanelList.get(0).add(this.jPanelList.get(3));
-       this.jPanelList.get(0).add(this.jPanelList.get(4));
-       this.jPanelList.get(0).add(this.jPanelList.get(5));
-       this.jPanelList.get(0).add(this.jPanelList.get(6));
-       this.jPanelList.get(6).setLayout(new GridLayout(1,1));       
+       this.jPanelList.get(0).setLayout(new GridLayout(2,1));
+       this.jPanelList.get(6).setLayout(new GridLayout(1,1));   
+       this.jPanelList.get(7).setLayout(new GridLayout(6,1));
+       this.jPanelList.get(8).setLayout(new GridLayout(1,1));
+       this.jPanelList.get(0).add(this.jPanelList.get(7));
+       this.jPanelList.get(0).add(this.jPanelList.get(8));
+       
+       this.jPanelList.get(7).add(this.jPanelList.get(1));
+       this.jPanelList.get(7).add(this.jPanelList.get(2));
+       this.jPanelList.get(7).add(this.jPanelList.get(3));
+       this.jPanelList.get(7).add(this.jPanelList.get(4));
+       this.jPanelList.get(7).add(this.jPanelList.get(5));
+       this.jPanelList.get(8).add(this.jPanelList.get(6));
+       
        
        this.iniciarEtiquetas();
        this.jPanelList.get(1).add(this.jLabelList.get(0));
        this.jPanelList.get(2).add(this.jLabelList.get(1));
        this.jPanelList.get(3).add(this.jLabelList.get(2));
        this.jPanelList.get(4).add(this.jLabelList.get(3));
-     //  this.jPanelList.get(6).add(this.jLabelList.get(4));
-     //  this.jPanelList.get(7).add(this.jLabelList.get(5));
-     //  this.jPanelList.get(8).add(this.jLabelList.get(6));
-       
+     
        
        this.iniciarCuadrosTexto();
        this.jPanelList.get(1).add(this.jtextFieldList.get(0));
@@ -137,11 +140,7 @@ public class PersonaVentana0304a extends JFrame implements ActionListener, KeyLi
        this.jtextFieldList.add(new JTextField());
        this.jtextFieldList.add(new JTextField());
        this.jtextFieldList.add(new JTextField());
-       
-       this.jtextFieldList.get(0).addKeyListener(this);
-       this.jtextFieldList.get(1).addKeyListener(this);
-       this.jtextFieldList.get(2).addKeyListener(this);
-              
+                  
        this.jtextFieldList.get(0).setColumns(5);
        this.jtextFieldList.get(1).setColumns(20);
        this.jtextFieldList.get(2).setColumns(20);
@@ -195,7 +194,7 @@ public class PersonaVentana0304a extends JFrame implements ActionListener, KeyLi
             params[5]=this.jtextFieldList.get(5).getText();
             params[5]=this.jtextFieldList.get(5).getText();
             this.personaControl.crear(params);
-            
+            this.actualizarTabla();
             
             
         }
@@ -205,24 +204,4 @@ public class PersonaVentana0304a extends JFrame implements ActionListener, KeyLi
         }
     }
 
-    @Override
-    public void keyTyped(KeyEvent e) {
-     //   if(e.getSource().equals(this.jtextFieldList.get(0)))
-     //       this.jLabelList.get(4).setText("keyTyped: "+String.valueOf(e.getKeyChar()));
-    }
-
-    @Override
-    public void keyPressed(KeyEvent e) {
-    //    if(e.getSource().equals(this.jtextFieldList.get(1)))
-   //         this.jLabelList.get(5).setText("keyPressed: "+String.valueOf(e.getKeyChar()));
-    }
-
-    @Override
-    public void keyReleased(KeyEvent e) {
-      //  if(e.getSource().equals(this.jtextFieldList.get(2)))
-           // this.jLabelList.get(6).setText("keyReleased: "+String.valueOf(e.getKeyChar()));
-    }
-   
-   
-   
 }
