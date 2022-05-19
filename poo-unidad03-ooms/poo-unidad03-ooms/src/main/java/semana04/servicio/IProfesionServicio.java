@@ -5,18 +5,18 @@
 package semana04.servicio;
 
 import java.util.List;
-import semana04.modelo.Persona;
+import semana04.modelo.Profesion;
 
 /**
  *
  * @author morti
  */
-public interface IPersonaServicio {
+public interface IProfesionServicio {
     
-    public Persona crear(Persona persona);
-    public List<Persona> listar();
-    public Persona buscarPorCodigo(int codigo);
-    public Persona eliminar(int codigo);
+    public Profesion crear(Profesion profesion);
+    public List<Profesion> listar();
+    public Profesion buscarPorCodigo(int codigo);
+    public Profesion eliminar(int codigo);
     
     
 }

@@ -14,7 +14,7 @@ import semana04.modelo.Persona;
  */
 public class PersonaServicio implements IPersonaServicio{
 
-    private final List<Persona> personaList = new ArrayList<>();
+    private static List<Persona> personaList = new ArrayList<>();
     
     @Override
     public Persona crear(Persona persona) {
@@ -27,8 +27,9 @@ public class PersonaServicio implements IPersonaServicio{
         return this.personaList;
     }
 
+   
     @Override
-    public Persona getByCodigo(int i) {
+    public Persona buscarPorCodigo(int i) {
         var persona = new Persona();
         for(Persona per:this.personaList){
             if(per.getCodigo()==i){
@@ -36,6 +37,12 @@ public class PersonaServicio implements IPersonaServicio{
                 break;
             }
         }
+        return persona;}
+
+    @Override
+    public Persona eliminar(int codigo) {
+        var persona = this.buscarPorCodigo(codigo);
+        this.personaList.remove(persona);
         return persona;
     }
     

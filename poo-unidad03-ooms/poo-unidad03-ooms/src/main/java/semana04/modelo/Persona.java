@@ -17,6 +17,16 @@ public class Persona {
     private String nombre;
     private String apellido;
     private LocalDate fechaNacimiento;
+    private Profesion profesion;
+
+    public Persona(int codigo, String nombre, String apellido, 
+            LocalDate fechaNacimiento, Profesion profesion) {
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.fechaNacimiento = fechaNacimiento;
+        this.profesion = profesion;
+    }
 
     public Persona(int codigo, String nombre, String apellido, 
             LocalDate fechaNacimiento) {
@@ -29,8 +39,6 @@ public class Persona {
     public Persona() {
     }
 
-    
-    
     public int getCodigo() {
         return codigo;
     }
@@ -66,6 +74,15 @@ public class Persona {
     public double getEdad(){
         return Period.between(fechaNacimiento, LocalDate.now()).getYears();
     }
+
+    public Profesion getProfesion() {
+        return profesion;
+    }
+
+    public void setProfesion(Profesion profesion) {
+        this.profesion = profesion;
+    }
+
     
     @Override
     public String toString() {
