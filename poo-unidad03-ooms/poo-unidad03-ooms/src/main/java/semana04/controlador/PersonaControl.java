@@ -10,6 +10,7 @@ import java.time.Month;
 import java.util.List;
 import semana04.modelo.Persona;
 import semana04.servicio.PersonaServicio;
+import semana04.servicio.ProfesionServicio;
 
 /**
  *
@@ -19,14 +20,15 @@ public class PersonaControl {
     
     
     private final PersonaServicio personaServicio = new PersonaServicio();
+    private final ProfesionServicio profesionServicio = new ProfesionServicio();
     
     public Persona crear(String [] params) {
         var fechaNacimiento = LocalDate.of(Integer.valueOf(params[3]),
                 Integer.valueOf(params[4]), 
-                Integer.valueOf(params[5]));
-      
+                Integer.valueOf(params[5]));  
+        var profesion = this.profesionServicio.buscarPorCodigo(Integer.valueOf(params[6]));
         var persona = new Persona(Integer.valueOf(params[0]),params[1],
-                params[2],fechaNacimiento);
+                params[2],fechaNacimiento,profesion);
         this.personaServicio.crear(persona);
         return persona;
     }
@@ -35,11 +37,4 @@ public class PersonaControl {
         return this.personaServicio.listar();
     }
 
-    public Persona getByCodigo(Object i) {
-        if((int)i>0)
-            return this.personaServicio.getByCodigo((int)i);
-        else
-            return this.personaServicio.getByCodigo(0);
-    }
-    
 }
