@@ -2,15 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package semana04.controlador;
+package semana05.controlador;
 
-import semana04.controlador.*;
+
 import java.time.LocalDate;
-import java.time.Month;
 import java.util.List;
-import semana04.modelo.Persona;
-import semana04.servicio.PersonaServicio;
-import semana04.servicio.ProfesionServicio;
+import semana05.modelo.Persona;
+import semana05.servicio.PersonaServicio;
+import semana05.servicio.ProfesionServicio;
 
 /**
  *

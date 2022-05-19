@@ -2,10 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package semana04.servicio;
+package semana05.servicio;
 
 import java.util.List;
-import semana04.modelo.Persona;
+import semana05.modelo.Persona;
 
 /**
  *

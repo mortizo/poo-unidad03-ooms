@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package semana04.vista;
+package semana05.vista;
 
 import java.awt.Color;
 import java.awt.FlowLayout;
@@ -27,10 +27,9 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
-import semana04.modelo.Persona;
-import semana04.controlador.PersonaControl;
-import semana04.controlador.ProfesionControl;
-import semana04.modelo.Profesion;
+import semana05.controlador.PersonaControl;
+import semana05.controlador.ProfesionControl;
+import semana05.modelo.Profesion;
 
 /**
  *
