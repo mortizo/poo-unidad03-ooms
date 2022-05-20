@@ -12,11 +12,11 @@ import semana05.controlador.ProfesionControl;
  *
  * @author morti
  */
-public class ProfesionVentana0304a extends javax.swing.JFrame {
+public class ProfesionVentana0305a extends javax.swing.JInternalFrame {
 
     private final ProfesionControl profesionControl  = new ProfesionControl();
     
-    public ProfesionVentana0304a() {
+    public ProfesionVentana0305a() {
         
         this.setTitle("Registro de Profesiones");
         initComponents();

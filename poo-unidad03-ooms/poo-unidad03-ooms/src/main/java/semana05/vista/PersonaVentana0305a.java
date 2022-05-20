@@ -6,6 +6,7 @@ package semana05.vista;
 
 import java.awt.Color;
 import java.awt.FlowLayout;
+import java.awt.Frame;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,8 +19,11 @@ import javax.swing.ButtonGroup;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
+import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
@@ -35,7 +39,7 @@ import semana05.modelo.Profesion;
  *
  * @author morti
  */
-public class PersonaVentana0304a extends JFrame implements ActionListener, KeyListener{
+public class PersonaVentana0305a extends JInternalFrame implements ActionListener, KeyListener{
 
     private List<JPanel> jPanelList;
     private List<JLabel> jLabelList;
@@ -50,7 +54,7 @@ public class PersonaVentana0304a extends JFrame implements ActionListener, KeyLi
     private final ProfesionControl profesionControl= new ProfesionControl();
 
     
-    public PersonaVentana0304a(String title) {
+    public PersonaVentana0305a(String title) {
         super(title);
         this.setSize(500, 600);
         this.setLocation(50, 100);
@@ -219,23 +223,33 @@ public class PersonaVentana0304a extends JFrame implements ActionListener, KeyLi
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource().equals(this.jButtonList.get(0))){
-            String [] params = new String[7];
-            params[0]=this.jtextFieldList.get(0).getText();
-            params[1]=this.jtextFieldList.get(1).getText();
-            params[2]=this.jtextFieldList.get(2).getText();
-            params[3]=this.jtextFieldList.get(3).getText();
-            params[4]=this.jtextFieldList.get(4).getText();
-            params[5]=this.jtextFieldList.get(5).getText();
-            var profesion = (Profesion)(this.jComboBox1.getSelectedItem());
-            params[6]=String.valueOf(profesion.getCodigo());
-            this.personaControl.crear(params);
-            this.actualizarTabla();
+            if(JOptionPane.showConfirmDialog(this, "¿ Está seguro de registrar estos datos ?",
+                    "Seleccione una opción...", JOptionPane.YES_NO_CANCEL_OPTION, 
+                    JOptionPane.QUESTION_MESSAGE)==0){
+                String [] params = new String[7];
+                params[0]=this.jtextFieldList.get(0).getText();
+                params[1]=this.jtextFieldList.get(1).getText();
+                params[2]=this.jtextFieldList.get(2).getText();
+                params[3]=this.jtextFieldList.get(3).getText();
+                params[4]=this.jtextFieldList.get(4).getText();
+                params[5]=this.jtextFieldList.get(5).getText();
+                var profesion = (Profesion)(this.jComboBox1.getSelectedItem());
+                params[6]=String.valueOf(profesion.getCodigo());
+                this.personaControl.crear(params);
+                this.actualizarTabla();
+                JOptionPane.showMessageDialog(this,"La persona se ha registrado con éxito",
+                        "Registro de personas",JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this,"Debe registrar sólamente números",
+                        "Registro de personas",JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(this,"La edad sobrepasa los 100 años",
+                        "Registro de personas",JOptionPane.WARNING_MESSAGE);
+            }
         }
         
         if(e.getSource().equals(this.jButtonList.get(1)))
             this.actualizarTabla();
-        
     }
+    
 
     @Override
     public void keyTyped(KeyEvent e) {
