@@ -14,6 +14,7 @@ import javax.swing.JPanel;
  *
  * @author morti
  */
+
 public class PanelPrincipal extends JPanel implements MouseListener {
 
     private int posX=-1;
