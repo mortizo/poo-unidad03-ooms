@@ -17,11 +17,11 @@ public class Internacionalizacion {
     
     
     public static void main(String [] args){       
-        ResourceBundle resourceBundle = ResourceBundle.getBundle("mensajes", Locale.getDefault());
+        ResourceBundle resourceBundle = ResourceBundle.getBundle("semana06.mensajes", Locale.getDefault());
         System.out.println(resourceBundle.getString("SALUDO"));
-        resourceBundle = ResourceBundle.getBundle("mensajes", new Locale("en","US"));
+        resourceBundle = ResourceBundle.getBundle("semana06.mensajes", new Locale("en","US"));
         System.out.println(resourceBundle.getString("SALUDO"));
-        resourceBundle = ResourceBundle.getBundle("mensajes", new Locale("fr","FR"));
+        resourceBundle = ResourceBundle.getBundle("semana06.mensajes", new Locale("fr","FR"));
         System.out.println(resourceBundle.getString("SALUDO"));
         
     }
