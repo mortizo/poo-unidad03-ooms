@@ -239,10 +239,6 @@ public class PersonaVentana0305a extends JInternalFrame implements ActionListene
                 this.actualizarTabla();
                 JOptionPane.showMessageDialog(this,"La persona se ha registrado con éxito",
                         "Registro de personas",JOptionPane.INFORMATION_MESSAGE);
-                JOptionPane.showMessageDialog(this,"Debe registrar sólamente números",
-                        "Registro de personas",JOptionPane.ERROR_MESSAGE);
-                JOptionPane.showMessageDialog(this,"La edad sobrepasa los 100 años",
-                        "Registro de personas",JOptionPane.WARNING_MESSAGE);
             }
         }
         
