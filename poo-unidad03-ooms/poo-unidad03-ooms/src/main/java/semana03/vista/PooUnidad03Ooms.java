@@ -18,7 +18,7 @@ public class PooUnidad03Ooms {
 
     public static void main(String[] args) {
         
-        var v1 = new PersonaVentana0303b("Unidad 03.03b");
+        var v1 = new CapitanVentana("Registro del Capitán");
         v1.setVisible(true);
 
     }

@@ -12,6 +12,7 @@ import java.time.LocalDate;
  */
 public class Persona {
     
+    
     private int codigo;
     private String nombre;
     private String apellido;
