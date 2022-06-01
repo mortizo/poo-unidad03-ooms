@@ -9,6 +9,10 @@ import java.awt.FlowLayout;
 import java.awt.HeadlessException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JButton;
@@ -22,7 +26,7 @@ import semana03.controlador.CapitanControl;
  *
  * @author morti
  */
-public class CapitanVentana extends JFrame implements ActionListener{
+public class CapitanVentana extends JFrame implements ActionListener, KeyListener, FocusListener{
     
     private List<JLabel> jLabelList;
     private List<JTextField> jTextFieldList;
@@ -70,6 +74,11 @@ public class CapitanVentana extends JFrame implements ActionListener{
         this.jTextFieldList = new ArrayList<>();
         this.jTextFieldList.add(new JTextField(5));
         this.jTextFieldList.add(new JTextField(20));
+        this.jTextFieldList.get(0).addKeyListener(this);
+        this.jTextFieldList.get(1).addActionListener(this);
+        this.jTextFieldList.get(0).addFocusListener(this);
+        this.jTextFieldList.get(1).addFocusListener(this);
+        
     }
     
     public void iniciarBotones(){
@@ -93,7 +102,42 @@ public class CapitanVentana extends JFrame implements ActionListener{
         if(e.getSource().equals(this.jButtonList.get(1))){
             System.out.println(this.capitanControl.listar().toString());
         }
+        if(e.getSource().equals(this.jTextFieldList.get(1)))
+        {
+            this.jTextFieldList.get(1).setText("Señor/a. "+
+                    this.jTextFieldList.get(1).getText());
+        }
     }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        System.out.println(e.getKeyChar());
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+                
+        if(!Character.isDigit(e.getKeyChar())){
+            this.jTextFieldList.get(0).setText("");
+        }
+    }
+
+    @Override
+    public void focusGained(FocusEvent e) {
+       
+        System.out.println("El componente "+e.getSource().toString()+" tiene el foco en este momento");
+        
+    }
+
+    @Override
+    public void focusLost(FocusEvent e) {
+        System.out.println("El componente "+e.getSource().toString()+" perdió el foco en este momento");    }
     
     
     
