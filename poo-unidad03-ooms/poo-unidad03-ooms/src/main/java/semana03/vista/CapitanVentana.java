@@ -98,6 +98,7 @@ public class CapitanVentana extends JFrame implements ActionListener, KeyListene
             this.capitanControl.crear(params);
             this.jTextFieldList.get(0).setText("");
             this.jTextFieldList.get(1).setText("");
+            
         }
         if(e.getSource().equals(this.jButtonList.get(1))){
             System.out.println(this.capitanControl.listar().toString());
