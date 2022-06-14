@@ -46,7 +46,8 @@ public class Capitan {
 
     @Override
     public String toString() {
-        return "Capitan{" + "codigo=" + codigo + ", nombre=" + nombre + ", pais=" + pais + '}';
+        return "Capitan{" + "codigo=" + codigo + ", nombre=" + nombre + 
+                ", pais=" + pais + '}';
     }
 
 }
