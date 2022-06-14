@@ -14,6 +14,7 @@ import semana04.modelo.Capitan;
 public interface ICapitanServicio {
     
     public Capitan crear(Capitan capitan);
+    public Capitan buscarPorCodigo(int codigoCapitan);
     public List<Capitan> listar();   
     
 }

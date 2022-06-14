@@ -14,8 +14,8 @@ public class PooUnidad03Ooms {
 
     public static void main(String[] args) {
         
-        var v1 = new PersonaVentana0304a("Registro de personas");
-        var v2 = new ProfesionVentana0304a();
+        var v1 = new CapitanVentana();
+        var v2 = new BarcoVentana();
         
         v1.setVisible(true);
         v2.setVisible(true);
