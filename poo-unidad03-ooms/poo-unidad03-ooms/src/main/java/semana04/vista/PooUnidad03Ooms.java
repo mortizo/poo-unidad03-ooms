@@ -5,6 +5,12 @@
 
 package semana04.vista;
 
+import semana04.vista.capitan.CreateCapitan;
+import semana04.vista.barco.CreateBarco;
+
+import semana04.vista.barco.DeleteBarco;
+import semana04.vista.barco.UpdateBarco;
+
 
 /**
  *
@@ -14,11 +20,15 @@ public class PooUnidad03Ooms {
 
     public static void main(String[] args) {
         
-        var v1 = new CapitanVentana();
-        var v2 = new BarcoVentana();
+        var v1 = new CreateBarco();
+        var v2 = new CreateCapitan();
+        var v3 = new DeleteBarco();
+        var v4 = new UpdateBarco();
         
         v1.setVisible(true);
         v2.setVisible(true);
+        v3.setVisible(true);
+        v4.setVisible(true);
         
 
     }

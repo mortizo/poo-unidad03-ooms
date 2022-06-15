@@ -2,20 +2,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package semana04.vista;
+package semana04.vista.barco;
 
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 import semana04.controlador.BarcoControl;
+import semana04.modelo.Barco;
 
 /**
  *
  * @author morti
  */
-public class BarcoVentana extends javax.swing.JFrame {
+public class DeleteBarco extends javax.swing.JFrame {
 
     /**
      * Creates new form BarcoVista
      */
-    public BarcoVentana() {
+    public DeleteBarco() {
         initComponents();
     }
 
@@ -58,18 +61,23 @@ public class BarcoVentana extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Código", "Nombre", "Color", "Placa", "Capitán"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
 
         jTextField1.setColumns(5);
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
 
         jTextField2.setColumns(30);
 
@@ -80,7 +88,7 @@ public class BarcoVentana extends javax.swing.JFrame {
 
         jTextField5.setColumns(5);
 
-        jButton1.setText("Guardar");
+        jButton1.setText("Eliminar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -182,26 +190,55 @@ public class BarcoVentana extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
-        String [] args = new String[5];
-        args[0]=this.jTextField1.getText();
-        args[1]=this.jTextField2.getText();
-        args[2]=this.jTextField3.getText();
-        args[3]=this.jTextField4.getText();
-        args[4]=this.jTextField5.getText();
-        
-        this.barcoControl.crear(args);
-        
+
+        String arg;
+        arg=this.jTextField1.getText();
+        this.barcoControl.eliminar(arg);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        
-        for(var b:this.barcoControl.listar()){
-            System.out.println(b.toString());
-        }
+       
+        this.actualizarTable1();
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        
+        String arg= this.jTextField1.getText();
+        Barco barco = this.barcoControl.buscarBarco(arg);
+        this.jTextField2.setText(barco.getNombre());
+        this.jTextField3.setText(barco.getColor());
+        this.jTextField4.setText(barco.getPlaca());
+        this.jTextField5.setText(String.valueOf(barco.getCapitan().getCodigo()));
+        
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void actualizarTable1(){
+        
+        String [] encabezado = new String[5];
+        encabezado[0]="Código";
+        encabezado[1]="Nombre";
+        encabezado[2]="Color";
+        encabezado[3]="Placa";
+        encabezado[4]="Capitán";
+        
+        
+        var datos = new Object[this.barcoControl.listar().size()][5];
+        
+        var i=0;
+        for(var barco:this.barcoControl.listar())
+        {
+            datos[i][0]=barco.getCodigo();
+            datos[i][1]=barco.getNombre();
+            datos[i][2]=barco.getColor();
+            datos[i][3]=barco.getPlaca();
+            datos[i][4]=barco.getCapitan().getNombre();
+            i++;
+        }
+        this.modeloTabla = new DefaultTableModel(datos,encabezado);
+        this.jTable1.setModel(modeloTabla);
+        
+    }
     /**
      * @param args the command line arguments
      */
@@ -219,26 +256,41 @@ public class BarcoVentana extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(BarcoVentana.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DeleteBarco.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(BarcoVentana.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DeleteBarco.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(BarcoVentana.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DeleteBarco.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(BarcoVentana.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(DeleteBarco.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new BarcoVentana().setVisible(true);
+                new DeleteBarco().setVisible(true);
             }
         });
     }
 
     private BarcoControl barcoControl = new BarcoControl();
+    private TableModel modeloTabla;
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;

@@ -26,6 +26,22 @@ public class BarcoControl {
         return barco;
     }
     
+    public Barco buscarBarco(String arg){
+        return this.barcoServicio.buscarPorCodigo(Integer.valueOf(arg));
+    }
+    
+    public Barco eliminar(String arg)
+    {
+        return this.barcoServicio.eliminar(Integer.valueOf(arg));
+    }
+    
+    public Barco modificar(String [] args){
+        Capitan capitan = this.capitanServicio.buscarPorCodigo(Integer.valueOf(args[4]));
+        Barco barcoNuevo = new Barco(Integer.valueOf(args[0]),args[1],args[2],args[3],capitan);
+        this.barcoServicio.modificar(Integer.valueOf(args[0]), barcoNuevo);
+        return barcoNuevo;
+    }
+    
     public List<Barco> listar(){
         return this.barcoServicio.listar();
     }
