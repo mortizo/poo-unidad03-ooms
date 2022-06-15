@@ -13,7 +13,7 @@ import semana05.controlador.BarcoControl;
  *
  * @author morti
  */
-public class CreateBarco extends javax.swing.JFrame {
+public class CreateBarco extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form BarcoVista
