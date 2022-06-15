@@ -70,10 +70,8 @@ public class BarcoVentana extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         jTextField1.setColumns(5);
-        jTextField1.setText(" ");
 
         jTextField2.setColumns(30);
-        jTextField2.setText(" ");
 
         jTextField3.setColumns(30);
         jTextField3.setText(" ");
