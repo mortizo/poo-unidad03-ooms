@@ -13,14 +13,14 @@ import javax.swing.JInternalFrame;
  *
  * @author morti
  */
-public class VentanaPrincipal0305 extends javax.swing.JFrame {
+public class VentanaPersonaProfesion extends javax.swing.JFrame {
 
     
     private PersonaVentana0305a personaVentana0305a;
     private ProfesionVentana0305a profesionVentana0305a;
     
     
-    public VentanaPrincipal0305() {
+    public VentanaPersonaProfesion() {
         initComponents();
         this.setSize(1500, 800);
     }
@@ -150,21 +150,23 @@ public class VentanaPrincipal0305 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VentanaPrincipal0305.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaPersonaProfesion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VentanaPrincipal0305.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaPersonaProfesion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VentanaPrincipal0305.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaPersonaProfesion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VentanaPrincipal0305.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VentanaPersonaProfesion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VentanaPrincipal0305().setVisible(true);
+                new VentanaPersonaProfesion().setVisible(true);
             }
         });
     }
