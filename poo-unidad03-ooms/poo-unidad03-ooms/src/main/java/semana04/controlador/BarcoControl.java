@@ -30,5 +30,4 @@ public class BarcoControl {
         return this.barcoServicio.listar();
     }
     
-    
 }
