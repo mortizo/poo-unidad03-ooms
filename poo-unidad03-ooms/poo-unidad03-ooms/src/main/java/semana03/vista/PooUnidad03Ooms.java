@@ -5,7 +5,7 @@
 
 package semana03.vista;
 
-import semana03.vista.PersonaVentana0303a;
+import semana03.vista.PersonaVentana0303b;
 import semana02.*;
 import semana01.*;
 import java.awt.Dimension;
@@ -18,7 +18,7 @@ public class PooUnidad03Ooms {
 
     public static void main(String[] args) {
         
-        var v1 = new CapitanVentana("Registro del Capitán");
+        var v1 = new PersonaVentana0303b("Persona");
         v1.setVisible(true);
 
     }
