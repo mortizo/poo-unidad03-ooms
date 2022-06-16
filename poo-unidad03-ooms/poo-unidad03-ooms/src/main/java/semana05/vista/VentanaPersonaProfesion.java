@@ -4,8 +4,8 @@
  */
 package semana05.vista;
 
-import semana05.vista.Persona.CreatePersona;
-import semana05.vista.Profesion.CreateProfesion;
+import semana05.vista.persona.CreatePersona;
+import semana05.vista.profesion.CreateProfesion;
 import javax.swing.JDesktopPane;
 import javax.swing.JDialog;
 import javax.swing.JFrame;

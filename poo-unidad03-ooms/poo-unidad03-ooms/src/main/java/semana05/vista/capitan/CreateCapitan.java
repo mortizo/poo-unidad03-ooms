@@ -13,7 +13,7 @@ import semana05.controlador.CapitanControl;
  *
  * @author morti
  */
-public class CreateCapitan extends javax.swing.JFrame {
+public class CreateCapitan extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form CapitanVentana

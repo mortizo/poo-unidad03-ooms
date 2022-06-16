@@ -4,6 +4,7 @@
  */
 package semana05.vista.barco;
 
+import javax.swing.JOptionPane;
 import semana05.vista.barco.*;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
@@ -194,6 +195,8 @@ public class CreateBarco extends javax.swing.JInternalFrame {
         args[4]=this.jTextField5.getText();
         
         this.barcoControl.crear(args);
+        
+        JOptionPane.showMessageDialog(this, "Barco alcenado con éxito");
         
     }//GEN-LAST:event_jButton1ActionPerformed
 

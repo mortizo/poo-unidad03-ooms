@@ -4,6 +4,7 @@
  */
 package semana05.vista.barco;
 
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import semana05.controlador.BarcoControl;
@@ -13,7 +14,7 @@ import semana05.modelo.Barco;
  *
  * @author morti
  */
-public class DeleteBarco extends javax.swing.JFrame {
+public class DeleteBarco extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form BarcoVista
@@ -193,7 +194,9 @@ public class DeleteBarco extends javax.swing.JFrame {
 
         String arg;
         arg=this.jTextField1.getText();
-        this.barcoControl.eliminar(arg);
+        if(JOptionPane.showConfirmDialog(this,"Está seguro de eliminar")==0){
+            this.barcoControl.eliminar(arg);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

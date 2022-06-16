@@ -4,6 +4,7 @@
  */
 package semana05.vista.barco;
 
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableModel;
 import semana05.controlador.BarcoControl;
@@ -13,7 +14,7 @@ import semana05.modelo.Barco;
  *
  * @author morti
  */
-public class UpdateBarco extends javax.swing.JFrame {
+public class UpdateBarco extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form BarcoVista
@@ -200,6 +201,8 @@ public class UpdateBarco extends javax.swing.JFrame {
         
         this.barcoControl.modificar(args);
         
+        JOptionPane.showMessageDialog(this, "Usuario actualizado",
+                "Modificar barcos", JOptionPane.ERROR_MESSAGE);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

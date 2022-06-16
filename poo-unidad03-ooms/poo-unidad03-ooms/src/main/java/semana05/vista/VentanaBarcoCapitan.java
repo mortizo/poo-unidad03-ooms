@@ -4,7 +4,10 @@
  */
 package semana05.vista;
 
+import javax.swing.JInternalFrame;
 import semana05.vista.barco.CreateBarco;
+import semana05.vista.barco.DeleteBarco;
+import semana05.vista.barco.UpdateBarco;
 import semana05.vista.capitan.CreateCapitan;
 
 /**
@@ -74,6 +77,11 @@ public class VentanaBarcoCapitan extends javax.swing.JFrame {
         jMenu2.add(jMenuItem2);
 
         jMenuItem3.setText("Modificar");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem3);
 
         jMenuItem4.setText("Eliminar");
@@ -116,17 +124,41 @@ public class VentanaBarcoCapitan extends javax.swing.JFrame {
         createBarco.setResizable(true);
         this.jDesktopPane1.add(createBarco);
         createBarco.setVisible(true);
+        createBarco.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
         // TODO add your handling code here:
+        var deleteBarco = new DeleteBarco();
+        deleteBarco.setClosable(true);
+        deleteBarco.setIconifiable(true);
+        deleteBarco.setResizable(true);
+        deleteBarco.setVisible(true);
+        this.jDesktopPane1.add(deleteBarco);
+        deleteBarco.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         // TODO add your handling code here:
         var createCapitan = new CreateCapitan();
+        createCapitan.setIconifiable(true);
+        createCapitan.setResizable(true);
+        createCapitan.setClosable(true);
+        this.jDesktopPane1.add(createCapitan);
         createCapitan.setVisible(true);
+        createCapitan.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+        // TODO add your handling code here:
+        var updateBarco = new UpdateBarco();
+        updateBarco.setIconifiable(true);
+        updateBarco.setResizable(true);
+        updateBarco.setClosable(true);
+        this.jDesktopPane1.add(updateBarco);
+        updateBarco.setVisible(true);
+        updateBarco.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_jMenuItem3ActionPerformed
 
     /**
      * @param args the command line arguments
