@@ -4,6 +4,8 @@
  */
 package semana05.vista;
 
+import semana05.vista.Persona.CreatePersona;
+import semana05.vista.Profesion.CreateProfesion;
 import javax.swing.JDesktopPane;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
@@ -16,8 +18,8 @@ import javax.swing.JInternalFrame;
 public class VentanaPersonaProfesion extends javax.swing.JFrame {
 
     
-    private PersonaVentana0305a personaVentana0305a;
-    private ProfesionVentana0305a profesionVentana0305a;
+    private CreatePersona personaVentana0305a;
+    private CreateProfesion profesionVentana0305a;
     
     
     public VentanaPersonaProfesion() {
@@ -107,7 +109,7 @@ public class VentanaPersonaProfesion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        personaVentana0305a = new PersonaVentana0305a("Registro de personas");
+        personaVentana0305a = new CreatePersona("Registro de personas");
         personaVentana0305a.setClosable(true);
         personaVentana0305a.setIconifiable(true);
         personaVentana0305a.setResizable(true);
@@ -124,7 +126,7 @@ public class VentanaPersonaProfesion extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu2ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        profesionVentana0305a = new ProfesionVentana0305a();
+        profesionVentana0305a = new CreateProfesion();
         profesionVentana0305a.setClosable(true);
         profesionVentana0305a.setIconifiable(true);
         profesionVentana0305a.setResizable(true);

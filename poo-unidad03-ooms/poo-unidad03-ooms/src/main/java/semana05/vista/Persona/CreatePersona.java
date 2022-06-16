@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package semana05.vista;
+package semana05.vista.Persona;
 
 import java.awt.Color;
 import java.awt.FlowLayout;
@@ -39,7 +39,7 @@ import semana05.modelo.Profesion;
  *
  * @author morti
  */
-public class PersonaVentana0305a extends JInternalFrame implements ActionListener, KeyListener{
+public class CreatePersona extends JInternalFrame implements ActionListener, KeyListener{
 
     private List<JPanel> jPanelList;
     private List<JLabel> jLabelList;
@@ -54,7 +54,7 @@ public class PersonaVentana0305a extends JInternalFrame implements ActionListene
     private final ProfesionControl profesionControl= new ProfesionControl();
 
     
-    public PersonaVentana0305a(String title) {
+    public CreatePersona(String title) {
         super(title);
         this.setSize(500, 600);
         this.setLocation(50, 100);

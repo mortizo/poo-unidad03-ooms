@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package semana05.vista;
+package semana05.vista.Profesion;
 
 
 import javax.swing.table.DefaultTableModel;
@@ -12,11 +12,11 @@ import semana05.controlador.ProfesionControl;
  *
  * @author morti
  */
-public class ProfesionVentana0305a extends javax.swing.JInternalFrame {
+public class CreateProfesion extends javax.swing.JInternalFrame {
 
     private final ProfesionControl profesionControl  = new ProfesionControl();
     
-    public ProfesionVentana0305a() {
+    public CreateProfesion() {
         
         this.setTitle("Registro de Profesiones");
         initComponents();
@@ -52,7 +52,7 @@ public class ProfesionVentana0305a extends javax.swing.JInternalFrame {
             .addGap(0, 300, Short.MAX_VALUE)
         );
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jLabel1.setText("Ingrese el código:");
 
