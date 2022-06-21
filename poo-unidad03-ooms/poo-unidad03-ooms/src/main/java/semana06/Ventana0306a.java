@@ -13,12 +13,14 @@ import javax.swing.JFrame;
  */
 public class Ventana0306a extends JFrame{
 
-    private PanelPrincipal panelPrincipal;
+    //private PanelPrincipal panelPrincipal;
+    private PanelPrincipal1 panelPrincipal;
     
     public Ventana0306a(String title) throws HeadlessException {
         super(title);
         this.setSize(600, 600);
-        this.panelPrincipal = new PanelPrincipal();
+      //  this.panelPrincipal = new PanelPrincipal();
+        this.panelPrincipal = new PanelPrincipal1();        
         this.setContentPane(this.panelPrincipal);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
