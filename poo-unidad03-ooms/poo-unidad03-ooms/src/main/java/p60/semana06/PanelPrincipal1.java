@@ -6,22 +6,27 @@ package p60.semana06;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Point;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import javax.swing.JPanel;
 
 /**
  *
  * @author UPS
  */
-public class PanelPrincipal1 extends JPanel{
+public class PanelPrincipal1 extends JPanel implements MouseListener{
     
     private Color color1;
     private Color color2;
     private Color color3;
+    private Point punto=new Point(-100,-100);
 
     public PanelPrincipal1(Color color1, Color color2, Color color3) {
         this.color1 = color1;
         this.color2 = color2;
         this.color3 = color3;
+        this.addMouseListener(this);
     }
     
     
@@ -34,6 +39,8 @@ public class PanelPrincipal1 extends JPanel{
         g.fillOval(0, 0, 300, 300);
         g.setColor(this.color3);
         g.fillRect(300, 300, 200, 250);
+        g.setColor(Color.BLACK);
+        g.fillOval(this.punto.x-10, this.punto.y-10, 20, 20);
     
     }
 
@@ -59,6 +66,35 @@ public class PanelPrincipal1 extends JPanel{
 
     public void setColor3(Color color3) {
         this.color3 = color3;
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+       System.out.println(e.toString());
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+         System.out.println(e.toString());
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        System.out.println(e.getX());
+        System.out.println(e.getY());
+        System.out.println(e.getPoint());
+        this.punto=e.getPoint();
+        this.repaint();
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        System.out.println(e.toString());
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        System.out.println(e.toString());
     }
     
     

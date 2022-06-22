@@ -31,6 +31,16 @@ public class Ventana0306a extends JFrame implements ActionListener{
     public Ventana0306a(String title) throws HeadlessException {
         super(title);
         this.setSize(600, 600);
+        this.iniciaComponentes();
+        this.setLayout(new BorderLayout());
+        this.add(this.jComboBox1,BorderLayout.NORTH);
+        this.add(this.jButton1,BorderLayout.SOUTH);
+        this.panelPrincipal = new PanelPrincipal1(Color.PINK,Color.CYAN,Color.GREEN);        
+        this.add(this.panelPrincipal,BorderLayout.CENTER);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+    
+    public void iniciaComponentes(){
         this.jComboBox1 = new JComboBox();
         this.jComboBox1.addItem("Rojo");
         this.jComboBox1.addItem("Azul");
@@ -45,16 +55,6 @@ public class Ventana0306a extends JFrame implements ActionListener{
         this.jComboBox3.addItem("Verde");
         this.jButton1 = new JButton("Colorear");
         this.jButton1.addActionListener(this);
-        this.setLayout(new BorderLayout());
-        this.add(this.jComboBox1,BorderLayout.NORTH);
-        this.add(this.jButton1,BorderLayout.SOUTH);
-        this.panelPrincipal = new PanelPrincipal1(Color.PINK,Color.CYAN,Color.GREEN);        
-        this.add(this.panelPrincipal,BorderLayout.CENTER);
-        
-      
-        
-        //this.setContentPane(this.panelPrincipal);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
     @Override
