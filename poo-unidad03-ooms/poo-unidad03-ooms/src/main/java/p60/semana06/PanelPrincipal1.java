@@ -83,8 +83,10 @@ public class PanelPrincipal1 extends JPanel implements MouseListener{
         System.out.println(e.getX());
         System.out.println(e.getY());
         System.out.println(e.getPoint());
+        System.out.println(e.getButton());
         this.punto=e.getPoint();
         this.repaint();
+        
     }
 
     @Override
