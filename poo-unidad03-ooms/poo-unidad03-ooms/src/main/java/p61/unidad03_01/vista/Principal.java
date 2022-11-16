@@ -13,12 +13,11 @@ import javax.swing.JFrame;
 public class Principal {
     
     public static void main(String[] args) {
-        var ventana0301a = new JFrame();
-        ventana0301a.setTitle("Ventana Unidad 03.01a");
-        ventana0301a.setSize(800, 600);
-        ventana0301a.setLocation(200, 100);
-        ventana0301a.setVisible(true);
-        ventana0301a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        var ventana1 = new Ventana0301a("Ecuador");
+        ventana1.iniciarComponentes();
+        ventana1.setVisible(true);
+        
+        
     }
     
 }
