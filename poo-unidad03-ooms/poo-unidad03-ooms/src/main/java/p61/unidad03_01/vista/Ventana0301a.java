@@ -17,33 +17,31 @@ import javax.swing.border.Border;
  *
  * @author Mauricio Ortiz Ochoa
  */
-public class Ventana0301a extends JFrame{
+public class Ventana0301a extends JFrame {
 
     private List<JPanel> jPanelList;
-    
+
     public Ventana0301a(String title) throws HeadlessException {
         super(title);
         this.setSize(800, 600);
         this.setLocation(200, 100);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.jPanelList= new ArrayList<>();
+        this.jPanelList = new ArrayList<>();
         this.setLayout(new FlowLayout());
     }
 
-    public void iniciarComponentes(){
-        var jPanelRojo= new JPanel();
+    public void iniciarComponentes() {
+        var jPanelRojo = new JPanel();
         jPanelRojo.setBackground(Color.red);
-        var jPanelAzul= new JPanel();
+        var jPanelAzul = new JPanel();
         jPanelAzul.setBackground(Color.blue);
-        var jPanelVerde= new JPanel();
+        var jPanelVerde = new JPanel();
         jPanelVerde.setBackground(Color.green);
         this.jPanelList.add(jPanelRojo);
         this.jPanelList.add(jPanelAzul);
         this.jPanelList.add(jPanelVerde);
-        this.getContentPane().add(this.jPanelList.get(0));
-        this.getContentPane().add(this.jPanelList.get(1));
-        this.getContentPane().add(this.jPanelList.get(2));
-        
+        for (var jPanel : this.jPanelList) {
+            this.getContentPane().add(jPanel);
+        }
     }
-    
 }
