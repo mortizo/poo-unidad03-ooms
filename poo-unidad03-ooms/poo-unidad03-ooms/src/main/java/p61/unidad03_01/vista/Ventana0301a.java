@@ -32,14 +32,17 @@ public class Ventana0301a extends JFrame {
 
     public void iniciarComponentes() {
         var jPanelRojo = new JPanel();
-        jPanelRojo.setBackground(Color.red);
         var jPanelAzul = new JPanel();
-        jPanelAzul.setBackground(Color.blue);
         var jPanelVerde = new JPanel();
+        
+        jPanelRojo.setBackground(Color.red);
+        jPanelAzul.setBackground(Color.blue);
         jPanelVerde.setBackground(Color.green);
+        
         this.jPanelList.add(jPanelRojo);
         this.jPanelList.add(jPanelAzul);
         this.jPanelList.add(jPanelVerde);
+        
         for (var jPanel : this.jPanelList) {
             this.getContentPane().add(jPanel);
         }
