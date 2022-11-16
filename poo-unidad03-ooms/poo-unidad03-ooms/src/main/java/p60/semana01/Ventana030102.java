@@ -50,7 +50,7 @@ public class Ventana030102 extends JFrame{
        this.jLabelList.add(new JLabel());
        this.jLabelList.add(new JLabel());
        
-       this.jLabelList.get(0).setBackground(Color.ORANGE);
+       this.jLabelList.get(0).setBackground(Color.PINK);
        this.jLabelList.get(0).setOpaque(true);
        this.jLabelList.get(0).setText("Computación");
        this.jLabelList.get(1).setBackground(Color.RED);
