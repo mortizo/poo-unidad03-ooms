@@ -30,9 +30,6 @@ public class Ventana0301c extends JFrame{
         this.setLocation(200, 100);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.iniciarPaneles();
-        
-        
-        
         this.setContentPane(this.jPanelList.get(0));
         this.setVisible(true);
         
