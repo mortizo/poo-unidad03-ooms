@@ -9,11 +9,15 @@ import java.awt.GridLayout;
 import java.awt.HeadlessException;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.ButtonGroup;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
 /**
@@ -28,6 +32,9 @@ public class Ventana0302a extends JFrame{
     public List<JTextField> jTextFieldList;
     public List<JButton> jButtonList;
     public List<JCheckBox> jCheckBoxList;
+    public List<JRadioButton> jRadioButtonList;
+    public List<JComboBox> jComboBoxList;
+    
     
     
 
@@ -40,6 +47,8 @@ public class Ventana0302a extends JFrame{
         this.iniciarJTextFields();
         this.iniciarJButtons();
         this.iniciarJCheckBoxs();
+        this.iniciarJRadioButton();
+        this.iniciarCombos();
         this.setContentPane(this.jPanelList.get(0));
         this.setVisible(true);
     }
@@ -54,15 +63,23 @@ public class Ventana0302a extends JFrame{
         this.jPanelList.add(new JPanel());
         this.jPanelList.add(new JPanel());
         this.jPanelList.add(new JPanel());
+        this.jPanelList.add(new JPanel());
+        this.jPanelList.add(new JPanel());
+        this.jPanelList.add(new JPanel());
         
         
-        this.jPanelList.get(0).setLayout(new GridLayout(7,1));
+        this.jPanelList.get(0).setLayout(new GridLayout(10,1));
         this.jPanelList.get(0).add(this.jPanelList.get(1));
         this.jPanelList.get(0).add(this.jPanelList.get(2));
         this.jPanelList.get(0).add(this.jPanelList.get(3));
         this.jPanelList.get(0).add(this.jPanelList.get(4));
         this.jPanelList.get(0).add(this.jPanelList.get(5));
         this.jPanelList.get(0).add(this.jPanelList.get(7));
+        this.jPanelList.get(0).add(this.jPanelList.get(8));
+        this.jPanelList.get(0).add(this.jPanelList.get(9));
+        this.jPanelList.get(0).add(this.jPanelList.get(10));
+        
+        
         this.jPanelList.get(0).add(this.jPanelList.get(6));
         
  
@@ -129,6 +146,41 @@ public class Ventana0302a extends JFrame{
         this.jPanelList.get(7).add(this.jCheckBoxList.get(1));
         this.jPanelList.get(7).add(this.jCheckBoxList.get(2));
         this.jPanelList.get(7).add(this.jCheckBoxList.get(3));
+        
+    }
+    
+    public void iniciarJRadioButton(){
+        this.jRadioButtonList = new ArrayList<>();
+        var buttonGroup = new ButtonGroup();
+        
+        this.jRadioButtonList.add(new JRadioButton("Varón"));
+        this.jRadioButtonList.add(new JRadioButton("Mujer"));
+        
+        buttonGroup.add(this.jRadioButtonList.get(0));
+        buttonGroup.add(this.jRadioButtonList.get(1));
+        
+        this.jPanelList.get(8).add(this.jRadioButtonList.get(0));
+        this.jPanelList.get(8).add(this.jRadioButtonList.get(1));
+        
+    }
+    
+    public void iniciarCombos(){
+        this.jComboBoxList = new ArrayList<>();
+        var listaPaises = new String[4];
+        listaPaises[0]="Qatar";
+        listaPaises[1]="Ecuador";
+        listaPaises[2]="Paises Bajos";
+        listaPaises[3]="Senegal";
+        
+        this.jComboBoxList.add(new JComboBox(new DefaultComboBoxModel(listaPaises)));
+        this.jComboBoxList.add(new JComboBox());
+        
+        
+        
+        
+        this.jPanelList.get(9).add(this.jComboBoxList.get(0));
+        this.jPanelList.get(10).add(this.jComboBoxList.get(1));
+        
         
     }
     
