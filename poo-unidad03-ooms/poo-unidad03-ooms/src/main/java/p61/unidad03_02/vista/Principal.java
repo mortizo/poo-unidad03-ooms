@@ -4,6 +4,8 @@
  */
 package p61.unidad03_02.vista;
 
+import p61.unidad03_03.controlador.ViajeControl;
+
 /**
  *
  * @author morti
@@ -12,6 +14,8 @@ public class Principal {
     
     public static void main(String[] args) {
         var ventana = new Ventana0302a("Registro de Jugador");
+        
+       
     }
     
 }

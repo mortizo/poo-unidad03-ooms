@@ -108,7 +108,6 @@ public class Ventana0303a extends JFrame implements ActionListener{
         this.jTextFieldList.add(new JTextField("dd"));
         
         
-        
         this.jPanelList.get(1).add(this.jLabelList.get(0));
         this.jPanelList.get(1).add(this.jTextFieldList.get(0));
         this.jPanelList.get(2).add(this.jLabelList.get(1));
@@ -192,18 +191,35 @@ public class Ventana0303a extends JFrame implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        
         if(e.getActionCommand().equals("Guardar")){
-            System.out.println("Dio click en en un botón guardar");
-        }else{
-            System.out.println("Dio click en en un botón cancelar");
-            System.out.println("Dio click en en un botón de arquero");
+                System.out.println(this.recuperarDatosIngresados()[0]);
+        }
+        if(e.getSource().equals(this.jButtonList.get(1))){
+            this.limpiarDatosIngressados();
         }
         
-        
-    
     }
     
     
+    private void limpiarDatosIngressados(){
+        this.jTextFieldList.get(0).setText("");
+    }
+    
+    public String [] recuperarDatosIngresados(){
+        var retorno = new String[12];
+        retorno[0]=this.jTextFieldList.get(0).getText();
+        if(this.jRadioButtonList.get(0).isSelected()){
+            retorno[1]="SI";
+        }
+        else{
+            retorno[1]="NO";
+        }
+        
+        
+        
+        return retorno;
+    }
     
     
 }
