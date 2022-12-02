@@ -34,9 +34,7 @@ public class Ventana0302a extends JFrame{
     public List<JCheckBox> jCheckBoxList;
     public List<JRadioButton> jRadioButtonList;
     public List<JComboBox> jComboBoxList;
-    
-    
-    
+
 
     public Ventana0302a(String title) throws HeadlessException {
         super(title);

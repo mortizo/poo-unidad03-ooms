@@ -7,7 +7,7 @@ package p61.unidad03_03.controlador;
 import java.time.LocalDate;
 import java.time.Month;
 import java.util.List;
-import p61.unidad03_02.modelo.Viaje;
+import p61.unidad03_03.modelo.Viaje;
 import p61.unidad03_03.servicio.ViajeServiceImpl;
 
 /**
