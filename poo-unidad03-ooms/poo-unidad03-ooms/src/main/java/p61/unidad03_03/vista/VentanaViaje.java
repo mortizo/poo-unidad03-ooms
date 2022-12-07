@@ -7,6 +7,10 @@ package p61.unidad03_03.vista;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JButton;
@@ -20,7 +24,7 @@ import p61.unidad03_03.controlador.ViajeControl;
  *
  * @author Mauricio Ortiz
  */
-public class VentanaViaje extends JFrame implements ActionListener {
+public class VentanaViaje extends JFrame implements ActionListener, KeyListener, MouseListener {
 
     private ViajeControl viajeControl;
     private List<JPanel> jPanelList;
@@ -76,21 +80,18 @@ public class VentanaViaje extends JFrame implements ActionListener {
 
         this.jButtonList.get(0).addActionListener(this);
         this.jButtonList.get(1).addActionListener(this);
+        
+        this.jTextFieldList.get(1).addKeyListener(this);
+        
+        this.jLabelList.get(0).addMouseListener(this);
 
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource().equals(this.jButtonList.get(0))) {
-            String[] datos = new String[6];
-            datos[0] = this.jTextFieldList.get(0).getText();
-            datos[1] = this.jTextFieldList.get(1).getText();
-            datos[2] = this.jTextFieldList.get(2).getText();
-            datos[3] = this.jTextFieldList.get(3).getText();
-            datos[4] = this.jTextFieldList.get(4).getText();
-            datos[5] = this.jTextFieldList.get(5).getText();
-
-            this.viajeControl.crear(datos);
+            this.viajeControl.crear(this.recuperarDatosIngresados());
+            this.limpiarDatosIngresados();
         }
 
         if (e.getSource().equals(this.jButtonList.get(1))) {
@@ -99,6 +100,61 @@ public class VentanaViaje extends JFrame implements ActionListener {
             }
         }
 
+    }
+
+    private void limpiarDatosIngresados() {
+        for (var i = 0; i < 6; i++) {
+            this.jTextFieldList.get(i).setText("");
+        }
+    }
+
+    private String[] recuperarDatosIngresados() {
+        String[] retorno = new String[6];
+        retorno[0] = this.jTextFieldList.get(0).getText();
+        retorno[1] = this.jTextFieldList.get(1).getText();
+        retorno[2] = this.jTextFieldList.get(2).getText();
+        retorno[3] = this.jTextFieldList.get(3).getText();
+        retorno[4] = this.jTextFieldList.get(4).getText();
+        retorno[5] = this.jTextFieldList.get(5).getText();
+        return retorno;
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+        System.out.println(e.getKeyChar());
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        System.out.println(e.getKeyCode());
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        System.out.println(e.getKeyLocation()+" soltó la tecla");
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        System.out.println(e.getPoint().toString());
+        System.out.println(e.getClickCount());
+        
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
     }
 
 }

@@ -23,14 +23,13 @@ public class ViajeControl {
         viajeServiceImpl= new ViajeServiceImpl();
     }
     
-    
     public void crear(String [] data){
-        var codigo=Integer.valueOf(data[0]).intValue();
+        var codigo=Integer.valueOf(data[0]);
         var origen=data[1];
         var destino=data[2];
-        var year=Integer.valueOf(data[3]).intValue();
-        var month=Integer.valueOf(data[4]).intValue();
-        var day=Integer.valueOf(data[5]).intValue();
+        var year=Integer.valueOf(data[3]);
+        var month=Integer.valueOf(data[4]);
+        var day=Integer.valueOf(data[5]);
         var fecha = LocalDate.of(year,month, day);
         
         var viaje= new Viaje(codigo,origen,destino,fecha);
