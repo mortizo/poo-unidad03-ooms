@@ -81,7 +81,6 @@ public class VentanaCiudad extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         jTextField1.setColumns(5);
-        jTextField1.setText(" ");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -89,7 +88,6 @@ public class VentanaCiudad extends javax.swing.JFrame {
         });
 
         jTextField2.setColumns(15);
-        jTextField2.setText(" ");
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -97,10 +95,8 @@ public class VentanaCiudad extends javax.swing.JFrame {
         });
 
         jTextField3.setColumns(18);
-        jTextField3.setText(" ");
 
         jTextField4.setColumns(8);
-        jTextField4.setText(" ");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

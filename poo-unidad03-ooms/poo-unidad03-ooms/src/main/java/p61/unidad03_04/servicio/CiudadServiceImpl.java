@@ -14,7 +14,7 @@ import p61.unidad03_04.modelo.Ciudad;
  */
 public class CiudadServiceImpl implements CiudadService{
 
-    private List<Ciudad> ciudadList= new ArrayList<>();
+    private static List<Ciudad> ciudadList= new ArrayList<>();
     
     @Override
     public void crear(Ciudad ciudad) {

@@ -209,7 +209,7 @@ public class VentanaViaje extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         
-        System.out.println(this.viajeControl.listar().size());
+        System.out.println(this.viajeControl.listar().get(0).getOrigen().getNombre());
         
         
     }//GEN-LAST:event_jButton2ActionPerformed
