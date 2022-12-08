@@ -5,17 +5,15 @@
 package p61.unidad03_04.servicio;
 
 import java.util.List;
-import p61.unidad03_04.modelo.Ciudad;
+import p61.unidad03_04.modelo.Viaje;
 
 /**
  *
  * @author Mauricio Ortiz
  */
-public interface CiudadService {
-    
-    public void crear(Ciudad ciudad);
-    public Ciudad buscarPorCodigo(int codigo);
-    public List<Ciudad> listar();
-    
-    
+public interface ViajeService {
+
+    public void crear(Viaje viaje);
+
+    public List<Viaje> listar();
 }

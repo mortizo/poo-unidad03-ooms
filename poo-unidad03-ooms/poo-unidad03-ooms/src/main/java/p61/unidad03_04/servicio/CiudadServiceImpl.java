@@ -22,8 +22,22 @@ public class CiudadServiceImpl implements CiudadService{
     }
 
     @Override
+    public Ciudad buscarPorCodigo(int codigo) {
+        Ciudad retorno=null;
+        for(var ciudad:this.ciudadList){
+            if(codigo==ciudad.getCodigo()){
+                retorno=ciudad;
+                break;
+            }
+        }
+        return retorno;
+    }
+    
+    @Override
     public List<Ciudad> listar() {
         return this.ciudadList;
     }
+
+    
     
 }
