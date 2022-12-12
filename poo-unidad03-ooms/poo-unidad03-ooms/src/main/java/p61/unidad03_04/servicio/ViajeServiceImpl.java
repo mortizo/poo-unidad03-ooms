@@ -15,7 +15,7 @@ import p61.unidad03_04.modelo.Viaje;
 public class ViajeServiceImpl implements ViajeService{
 
     private static List<Viaje> viajeList = new ArrayList<>();
-    
+
     @Override
     public void crear(Viaje viaje) {
   

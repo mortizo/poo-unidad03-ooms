@@ -175,10 +175,16 @@ public class VentanaCiudad extends javax.swing.JFrame {
         data[3] = this.jTextField4.getText();
 
         this.ciudadControl.crear(data);
+        this.actualizarTabla();
 
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        this.actualizarTabla();
+
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    public void actualizarTabla() {
 
         var data = new Object[this.ciudadControl.listar().size()][4];
         for (var i = 0; i < this.ciudadControl.listar().size(); i++) {
@@ -197,13 +203,11 @@ public class VentanaCiudad extends javax.swing.JFrame {
         encabezado[3] = "Población";
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(data, encabezado));
-
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }
 
     /**
      * @param args the command line arguments
      */
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

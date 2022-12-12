@@ -15,6 +15,7 @@ public interface CiudadService {
     
     public void crear(Ciudad ciudad);
     public Ciudad buscarPorCodigo(int codigo);
+    public Ciudad buscarPorNombre(String nombre);
     public List<Ciudad> listar();
     
     

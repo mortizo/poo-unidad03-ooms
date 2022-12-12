@@ -12,10 +12,10 @@ import p61.unidad03_04.modelo.Ciudad;
  *
  * @author Mauricio Ortiz
  */
-public class CiudadServiceImpl implements CiudadService{
+public class CiudadServiceImpl implements CiudadService {
 
-    private static List<Ciudad> ciudadList= new ArrayList<>();
-    
+    private static List<Ciudad> ciudadList = new ArrayList<>();
+
     @Override
     public void crear(Ciudad ciudad) {
         this.ciudadList.add(ciudad);
@@ -23,21 +23,33 @@ public class CiudadServiceImpl implements CiudadService{
 
     @Override
     public Ciudad buscarPorCodigo(int codigo) {
-        Ciudad retorno=null;
-        for(var ciudad:this.ciudadList){
-            if(codigo==ciudad.getCodigo()){
-                retorno=ciudad;
+        Ciudad retorno = null;
+        for (var ciudad : this.ciudadList) {
+            if (codigo == ciudad.getCodigo()) {
+                retorno = ciudad;
                 break;
             }
         }
         return retorno;
     }
-    
+
     @Override
     public List<Ciudad> listar() {
         return this.ciudadList;
     }
 
-    
-    
+    @Override
+    public Ciudad buscarPorNombre(String nombre) {
+        Ciudad retorno = null;
+        
+        for(var ciudad:this.ciudadList){
+            if(nombre.equals(ciudad.getNombre())){
+                retorno=ciudad;
+                break;
+            }
+        }
+
+        return retorno;
+    }
+
 }
