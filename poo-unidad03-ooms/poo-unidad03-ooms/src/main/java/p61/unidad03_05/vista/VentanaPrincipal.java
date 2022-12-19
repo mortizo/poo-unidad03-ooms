@@ -107,6 +107,7 @@ public class VentanaPrincipal extends javax.swing.JFrame {
         ventanaCiudad.setClosable(true);
         ventanaCiudad.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         ventanaCiudad.setVisible(true);
+        this.jDesktopPane1.add(ventanaCiudad);
         
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 

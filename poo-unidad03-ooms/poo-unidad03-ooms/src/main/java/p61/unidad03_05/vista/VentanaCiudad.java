@@ -5,6 +5,7 @@
 package p61.unidad03_05.vista;
 
 import javax.swing.JInternalFrame;
+import javax.swing.JOptionPane;
 import p61.unidad03_05.controlador.CiudadControl;
 
 /**
@@ -181,7 +182,11 @@ public class VentanaCiudad extends JInternalFrame {
 
         this.ciudadControl.crear(data);
         this.actualizarTabla();
-
+    //    JOptionPane.showMessageDialog(this, "Datos guardados");
+   //     JOptionPane.showMessageDialog(this, "Datos guardados","Sistema de Ciudades 1.0",JOptionPane.QUESTION_MESSAGE);
+        var opcion=JOptionPane.showConfirmDialog(this, "Está seguro de eliminar", "Sistema de ciudades 1.0 ", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(this, opcion);
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
